@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "express": "3.2.4",
-    "jade": "0.30.0"
+    "jade": "0.30.0",
+    "oauth": "0.9.10"
   }
 }
