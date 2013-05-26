@@ -68,7 +68,8 @@ $(function() {
           names2 = this.getNames(c2),
           c1item, c2item,
           name1, name2,
-          formatted = [],
+          allAlbums = [],
+          allAlbumsNames = [],
           index;
 
       for (var i = 0, len = names1.length; i < len; i++) {
@@ -76,26 +77,26 @@ $(function() {
         index = names2.indexOf(name1);
 
         if (index > -1) {
-          c1[index].belongsTo = 'both';
-          formatted.push(c1[index]);
+          c1[i].belongsTo = 'both';
         } else {
           c1[i].belongsTo = 'collection1';
-          formatted.push(c1[i]);
         }
 
+        allAlbums.push(c1[i]);
+        allAlbumsNames.push(name1);
       }
 
       for (var j = 0, len2 = names2.length; j < len2; j++) {
         name2 = names2[j];
-        index = formatted.indexOf(name2);
+        index = allAlbumsNames.indexOf(name2);
 
         if (index === -1) {
           c2[j].belongsTo = 'collection2';
-          formatted.push(c2[j]);
+          allAlbums.push(c2[j]);
         }
       }
 
-      return this.sortAlphabetically(formatted, 'name');
+      return this.sortAlphabetically(allAlbums, 'name');
     },
 
     getNames: function(collection) {
