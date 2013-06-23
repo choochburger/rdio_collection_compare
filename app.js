@@ -10,16 +10,22 @@ var express = require('express'),
     path = require('path'),
     config = require('./config').config,
     OAuth = require('oauth').OAuth,
-    querystring = require('querystring');
+    querystring = require('querystring'),
+    handlebars = require('connect-handlebars');
 
 var app = express();
 
-//oauth setup
+// oauth setup
 app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use(express.session({
   secret: '13jFEKabrjw32rjsnzs'
+}));
+
+// handlebars
+app.use('/templates.js', handlebars(__dirname + '/templates', {
+  exts: ['hbs']
 }));
 
 // all environments

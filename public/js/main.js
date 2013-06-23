@@ -114,10 +114,11 @@ $(function() {
             'collection1': '',
             'collection2': '',
             'both':        ''
-          };
+          },
+          albumTemplate = Handlebars.templates['album'];
 
       _.each(comparedCollections, function(album) {
-        htmls[album.belongsTo] += '<li><img src="'+album.icon+'" width="100"></li>';
+        htmls[album.belongsTo] += albumTemplate(album);
       });
 
       _.each(htmls, function(listHtml, className) {
