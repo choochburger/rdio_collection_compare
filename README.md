@@ -1,7 +1,7 @@
 rdio collection compare
 =======================
 
-Help your friends listen to less shitty music! This app lets you compare two user's Rdio collections and make album recommendations.
+This app lets you compare two user's Rdio collections and make album recommendations.
 
 This app requires [Node.js](http://nodejs.org/):
 

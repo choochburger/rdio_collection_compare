@@ -8,31 +8,31 @@ block content
     .control-group
       label.control-label Email 1:
       .controls
-        input.email1(value="jessicaelyons@gmail.com", placeholder="rdio_email1@email.com", type="email", required)
+        input.email1(placeholder="rdio_email1@email.com", type="email", required)
     .control-group
       label.control-label Email 2:
       .controls
-        input.email2(value="lyons.chr@gmail.com", placeholder="rdio_email2@email.com", type="email", required)
+        input.email2(placeholder="rdio_email2@email.com", type="email", required)
     .control-group
       .controls
         button.btn.fetch Fetch Collections
 
   hr
 
-  h4.loading(style="display: none;")
-    | Loading collections. This might take a bit. Go grab a beer.
-    img(src="img/loading-beer.gif")
-
   .collections.row-fluid.span12
-    .collection1.span4
+    .collection1.album-list.span4
       span collection1
       hr
       ul
-    .both.span4
+    .both.album-list.span4
       span both
       hr
       ul
-    .collection2.span4
+    .collection2.album-list.span4
       span collection2
       hr
       ul
+
+  h4.loading(style="display: none;")
+    | Loading collections. This might take a bit. Go grab a beer.
+    img(src="img/loading-beer.gif")
