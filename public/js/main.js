@@ -36,6 +36,9 @@ $(function() {
         return false;
       }
 
+      this.$collection1.find('.title').text(email1);
+      this.$collection2.find('.title').text(email2);
+
       this.$fetchBtn.attr('disabled', true);
       this.$loading.show();
       this.$albumLists.empty();

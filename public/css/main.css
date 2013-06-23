@@ -1,22 +1,24 @@
+.album-list {
+  list-style: none;
+  margin: 0;
+}
 
+.album-list-item {
+  padding: 4px;
+  border-radius: 0 8px 8px 0;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.album-list-item .img {
+  background: #e6e4e4;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  min-width: 100px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ====== media ====== */
+/* Stolen from http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ */
+.media {margin:1px;}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}
