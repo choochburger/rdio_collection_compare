@@ -50,7 +50,7 @@ module.exports = function(app, rdio) {
 
     for (var i = 0, len = keys.length; i < len; i++) {
       getUserCollection(req, keys[i], function(collection) {
-        collections.push(collection);
+        collections.push(collection || []);
         if (collections.length === keys.length) callback(collections);
       });
     }
