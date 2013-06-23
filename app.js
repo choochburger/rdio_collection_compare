@@ -8,7 +8,7 @@ var express = require('express'),
     compare = require('./routes/compare'),
     http = require('http'),
     path = require('path'),
-    config = require('./config'),
+    config = require('./config').config,
     OAuth = require('oauth').OAuth,
     querystring = require('querystring');
 
